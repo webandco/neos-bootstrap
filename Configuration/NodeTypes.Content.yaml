@@ -60,13 +60,12 @@
 
 'Webandco.Bootstrap:OneColumn':
   superTypes:
-    'TYPO3.Neos.NodeTypes:MultiColumn': TRUE
+    'TYPO3.Neos.NodeTypes:TwoColumn': TRUE
   ui:
     label: 'One Column Content'
     position: 10
   childNodes:
-    column0:
-      type: 'TYPO3.Neos:ContentCollection'
+    column1: ~
     properties:
       md:
         defaultValue: '12'

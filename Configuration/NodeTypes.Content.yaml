@@ -1,0 +1,73 @@
+'TYPO3.Neos.NodeTypes:Column':
+  properties:
+    layout: ~
+    xs:
+      type: string
+      ui:
+        label: 'xs'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'column'
+
+    sm:
+      type: string
+      ui:
+        label: 'sm'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'column'
+
+    md:
+      type: string
+      ui:
+        label: 'md'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'column'
+
+    lg:
+      type: string
+      ui:
+        label: 'lg'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'column'
+
+    xl:
+      type: string
+      ui:
+        label: 'xs'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'column'
+
+
+'TYPO3.Neos.NodeTypes:TwoColumn':
+  properties:
+    md:
+      defaultValue: '6-6'
+
+'TYPO3.Neos.NodeTypes:ThreeColumn':
+  properties:
+    md:
+      defaultValue: '4-4-4'
+
+'TYPO3.Neos.NodeTypes:FourColumn':
+  properties:
+    md:
+      defaultValue: '3-3-3-3'
+
+
+'Webandco.Bootstrap:OneColumn':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:MultiColumn': TRUE
+  ui:
+    label: 'One Column Content'
+    position: 10
+  childNodes:
+    column0:
+      type: 'TYPO3.Neos:ContentCollection'
+    properties:
+      md:
+        defaultValue: '12'
+

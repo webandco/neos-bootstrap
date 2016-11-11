@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "webandco/bootstrap",
+    "require": {
+        "typo3/flow": "*",
+        "webandco/base": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Webandco\\Bootstrap": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Webandco.Bootstrap"
+        }
+    }
+}

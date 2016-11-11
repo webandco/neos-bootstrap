@@ -1,0 +1,13 @@
+prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
+    @context.xs = ${q(node).parent().property('xs') ? ' col-xs-' + String.split(q(node).parent().property('xs'), '-')[multiColumnIteration.index] : ''}
+    @context.sm = ${q(node).parent().property('sm') ? ' col-sm-' + String.split(q(node).parent().property('sm'), '-')[multiColumnIteration.index]: ''}
+    @context.md = ${q(node).parent().property('md') ? ' col-md-' + String.split(q(node).parent().property('md'), '-')[multiColumnIteration.index]: ''}
+    @context.lg = ${q(node).parent().property('lg') ? ' col-lg-' + String.split(q(node).parent().property('lg'), '-')[multiColumnIteration.index]: ''}
+    @context.xl = ${q(node).parent().property('xl') ? ' col-xl-' + String.split(q(node).parent().property('xl'), '-')[multiColumnIteration.index]: ''}
+    attributes.class = ${xs + sm + md + lg + xl}
+    content {
+        @process.myWrap = ${!node.context.inBackend && q(node).children().count() > 1 ? value : '<div class="row cc '+ q(node).children().count() +' ">' + value + '</div>'}
+        @process.myWrap = ${!node.context.inBackend && q(node).children('[instanceof Webandco.Wireframe:Box]').count() > 0 ? '<div class="row dd '+ q(node).children().count() +' ">' + value + '</div>' : value}
+    }
+
+}

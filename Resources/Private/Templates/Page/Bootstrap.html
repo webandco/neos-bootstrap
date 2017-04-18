@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<html>
+<head>
+	<f:section name="stylesheetBootstrap">
+		<link rel="stylesheet" href="{f:uri.resource(path: '3.3/css/bootstrap.css', package: 'Neos.Twitter.Bootstrap')}" media="all" />
+		<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/bootstrap.css', package: 'Webandco.Bootstrap')}" media="all" />
+	</f:section>
+</head>
+<body>
+	<f:section name="body">
+		{content.main -> f:format.raw()}
+	</f:section>
+	<f:section name="bodyScriptBootstrap">
+			<script src="{f:uri.resource(path: 'Libraries/jQuery/jquery-2.0.2.min.js', package: 'Neos.Twitter.Bootstrap', localize: 'false')}"></script>
+			<script src="{f:uri.resource(path: '3.3/js/bootstrap.min.js', package: 'Neos.Twitter.Bootstrap', localize: 'false')}"></script>
+		</f:section>
+	</body>
+</html>

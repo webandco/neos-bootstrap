@@ -1,5 +1,10 @@
-TYPO3:
+Neos:
   Neos:
-    typoScript:
+    fusion:
       autoInclude:
         'Webandco.Bootstrap': TRUE
+    nodeTypes:
+      groups:
+        bootstrap:
+          position: 300
+          label: 'Bootstrap'

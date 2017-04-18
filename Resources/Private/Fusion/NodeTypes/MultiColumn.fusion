@@ -1,0 +1,22 @@
+prototype(Neos.NodeTypes:MultiColumn) {
+    templatePath = 'resource://Webandco.Bootstrap/Private/Templates/NodeTypes/MultiColumn.html'
+    attributes.class = ${q(node).children().first().is('[instanceof TYPO3.Neos:ContentCollection]') ? value + ' row aa' : value}
+    attributes.class {
+        @process.alignment       = ${node.properties.alignment ? value + ' ' + node.properties.alignment : value}
+        @process.backgroundColor = ${node.properties.showBackgroundColor ? value + ' colored' : value}
+    }
+
+    attributes.style = ${node.properties.marginBottom ? 'margin-bottom: ' + node.properties.marginBottom + 'px; ' : ''}
+
+    columns {
+        iterationName = 'multiColumnIteration'
+    }
+    @process.wrapSection          = ${node.properties.wrapper == 'section' ? '<section class="container-fluid">' + value + '</section>'  : value }
+    @process.wrapSectionContainer = ${node.properties.wrapper == 'sectionContainer' ? '<section class="container">' + value + '</section>'  : value }
+    @process.wrapDivContainer     = ${node.properties.wrapper == 'divContainer' ? '<div class="container">' + value + '</div>'  : value }
+}
+
+# One Column TS Object
+prototype(Webandco.Bootstrap:OneColumn) >
+prototype(Webandco.Bootstrap:OneColumn) < prototype(Neos.NodeTypes:MultiColumn)
+

@@ -1,0 +1,17 @@
+prototype(Neos.Neos:Page) {
+    head {
+        stylesheets.bootstrap = Neos.Fusion:Template {
+			templatePath = 'resource://Webandco.Bootstrap/Private/Templates/Page/Bootstrap.html'
+			sectionName = 'stylesheetBootstrap'
+		}
+	}
+
+    body {
+        templatePath = 'resource://Webandco.Bootstrap/Private/Templates/Page/Bootstrap.html'
+
+        javascripts.bootstrap = Neos.Fusion:Template {
+			templatePath = 'resource://Webandco.Bootstrap/Private/Templates/Page/Bootstrap.html'
+			sectionName = 'bodyScriptBootstrap'
+		}
+    }
+}

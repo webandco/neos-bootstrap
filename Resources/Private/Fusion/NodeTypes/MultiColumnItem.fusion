@@ -1,4 +1,4 @@
-prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
+prototype(Neos.NodeTypes:MultiColumnItem) {
     @context.xs = ${q(node).parent().property('xs') ? ' col-xs-' + String.split(q(node).parent().property('xs'), '-')[multiColumnIteration.index] : ''}
     @context.sm = ${q(node).parent().property('sm') ? ' col-sm-' + String.split(q(node).parent().property('sm'), '-')[multiColumnIteration.index]: ''}
     @context.md = ${q(node).parent().property('md') ? ' col-md-' + String.split(q(node).parent().property('md'), '-')[multiColumnIteration.index]: ''}
